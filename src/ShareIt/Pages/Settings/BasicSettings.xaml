@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ShareIt.Pages.Settings.BasicSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:settings="clr-namespace:ShareIt.Pages.Settings"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance settings:BasicShareItSettingsViewModel}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <TextBlock Text="Basic Settings" Style="{StaticResource Heading2}" />
+                <TextBlock Text="Image directory" />
+                <TextBox Margin="5" Text="{Binding ImageDirectory}" />
+                <TextBlock Text="Video directory" />
+                <TextBox Margin="5" Text="{Binding VideoDirectory}" />
+                <Button Margin="5" Command="{Binding SaveSettingsCommand}">Save</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

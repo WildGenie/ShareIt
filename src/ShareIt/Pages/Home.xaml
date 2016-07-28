@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ShareIt.Pages.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+
+                <TextBlock Text="Welcome back.." Style="{StaticResource Heading2}" />
+                <TextBlock
+                    Text="Hello, this project is still under construction. Please visit github.com/lolp1 to contribute." />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

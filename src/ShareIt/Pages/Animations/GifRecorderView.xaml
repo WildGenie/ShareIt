@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="ShareIt.Pages.Animations.GifRecorderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:settings="clr-namespace:ShareIt.Pages.Animations"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance settings:GifRecorderViewModel}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <TextBlock Text="Gif Recorder" Style="{StaticResource Heading2}" />
+                <TextBlock Margin="5" Text="Frames to capture" />
+                <TextBox Margin="5" Text="{Binding Frames}" />
+                <TextBlock Margin="5" Text="Frame rate" />
+                <TextBox Margin="5" Text="{Binding FrameRate}" />
+                <Button Margin="5" Command="{Binding RecordGifCommand}" Content="Record" />
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
